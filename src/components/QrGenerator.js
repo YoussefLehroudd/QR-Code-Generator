@@ -486,19 +486,7 @@ export default function QrGenerator() {
                         />
                       </div>
                     </div>
-                    <label>
-                      Logo Size:
-                      <input
-                        type="range"
-                        min="20"
-                        max="100"
-                        value={logoSize}
-                        onChange={(e) => setLogoSize(Number(e.target.value))}
-                        className="size-slider"
-                      />
-                      <span>{logoSize}px</span>
-                    </label>
-                    <div style={{ marginBottom: '1rem' }}>
+                     <div style={{ marginBottom: '1rem' }}>
                       <label style={{ display: 'block', marginBottom: '0.5rem' }}>Background Color:</label>
                       <div style={{ display: 'flex', gap: '8px' }}>
                         <input
@@ -530,6 +518,18 @@ export default function QrGenerator() {
                         />
                       </div>
                     </div>
+                    <label>
+                      Logo Size:
+                      <input
+                        type="range"
+                        min="20"
+                        max="100"
+                        value={logoSize}
+                        onChange={(e) => setLogoSize(Number(e.target.value))}
+                        className="size-slider"
+                      />
+                      <span>{logoSize}px</span>
+                    </label>
                   </div>
                 </div>
               )}
