@@ -708,7 +708,7 @@
 @media (max-width: 768px) {
   .qr-content {
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
   }
 
   .qr-form,
@@ -718,7 +718,18 @@
   }
 
   .logo-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+
+  .logo-item {
+    padding: 4px;
+  }
+
+  .logo-item img {
+    width: 100%;
+    height: auto;
+    max-width: 70px;
   }
 
   .settings-group {
@@ -727,55 +738,54 @@
 
   .settings-group label {
     font-size: 16px;
+    min-height: 44px;
+  }
+
+  .logo-section {
+    margin: 10px 0;
+  }
+
+  .logo-content {
+    padding: 15px;
   }
 }
 
 /* Additional mobile optimizations for smaller screens (Realme C61) */
 @media (max-width: 480px) {
   .qr-container {
-    padding: 12px;
+    padding: 8px;
   }
 
   .qr-content {
-    gap: 24px;
-  }
-
-  .settings-group input[type="text"] {
-    font-size: 16px;
-    padding: 14px;
-  }
-
-  .settings-group input[type="color"] {
-    width: 48px;
-    height: 48px;
+    gap: 16px;
   }
 
   .logo-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .logo-item img {
+    max-width: 80px;
   }
 
   .settings-group > div {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
-  /* Improve touch targets */
-  .settings-group label {
-    min-height: 44px;
-    display: flex;
-    align-items: center;
+  .divider {
+    margin: 12px 0;
   }
 
-  .size-slider {
-    height: 8px;
+  .upload-area {
+    min-height: 80px;
+    padding: 12px;
   }
 
-  .size-slider::-webkit-slider-thumb {
-    width: 24px;
-    height: 24px;
+  .upload-label {
+    padding: 8px;
   }
 
-  /* Better spacing for mobile */
   .qr-preview {
     padding: 16px;
   }
