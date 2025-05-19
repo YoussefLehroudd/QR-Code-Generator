@@ -174,6 +174,40 @@
   background-color: #fff;
 }
 
+/* Enhanced color input styles */
+.settings-group input[type="text"] {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s ease;
+  color: #1a202c;
+}
+
+.settings-group input[type="text"]:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+  outline: none;
+}
+
+.settings-group input[type="color"] {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #e2e8f0;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 2px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.settings-group input[type="color"]:hover {
+  transform: scale(1.05);
+  border-color: #4f46e5;
+}
+
 /* Style for select options */
 .format-select option {
   padding: 12px 16px;
@@ -670,6 +704,7 @@
   font-size: 14px;
 }
 
+/* Enhanced mobile responsiveness */
 @media (max-width: 768px) {
   .qr-content {
     flex-direction: column;
@@ -684,6 +719,75 @@
 
   .logo-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .settings-group {
+    padding: 12px;
+  }
+
+  .settings-group label {
+    font-size: 16px;
+  }
+}
+
+/* Additional mobile optimizations for smaller screens (Realme C61) */
+@media (max-width: 480px) {
+  .qr-container {
+    padding: 12px;
+  }
+
+  .qr-content {
+    gap: 24px;
+  }
+
+  .settings-group input[type="text"] {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .settings-group input[type="color"] {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .settings-group > div {
+    margin-bottom: 20px;
+  }
+
+  /* Improve touch targets */
+  .settings-group label {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .size-slider {
+    height: 8px;
+  }
+
+  .size-slider::-webkit-slider-thumb {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Better spacing for mobile */
+  .qr-preview {
+    padding: 16px;
+  }
+
+  .modal {
+    padding: 24px;
+    width: 95%;
+  }
+
+  .format-select {
+    padding: 16px;
+    font-size: 16px;
   }
 }
 
